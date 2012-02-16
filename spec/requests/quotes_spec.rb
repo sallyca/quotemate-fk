@@ -25,12 +25,12 @@ describe "Quotes" do
       page.should have_content('Interaction')
       end
 
-    it "supports js", :js => true do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit quotes_path
-      click_link "test js"
-      page.should have_content('js works')
-    end
+    # it "supports js", :js => true do
+    #   # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
+    #   visit quotes_path
+    #   click_link "test js"
+    #   page.should have_content('js works')
+    # end
 
   end
 

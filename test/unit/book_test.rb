@@ -4,5 +4,5 @@ class BookTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
-  should have_many(:quotes).dependent(:destroy)
+  should have_many(:quotes)
 end

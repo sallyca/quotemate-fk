@@ -30,7 +30,7 @@ GEM
       activesupport (= 3.1.0)
     activesupport (3.1.0)
       multi_json (~> 1.0)
-    addressable (2.2.6)
+    addressable (2.2.7)
     ansi (1.4.2)
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
@@ -70,7 +70,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.17.2)
-    minitest (2.11.1)
+    minitest (2.11.2)
     multi_json (1.0.4)
     nokogiri (1.5.0)
     polyglot (0.3.3)
@@ -127,8 +127,6 @@ GEM
       multi_json (~> 1.0.4)
       rubyzip
     shoulda (2.11.3)
-    shoulda-context (1.0.0)
-    shoulda-matchers (1.0.0)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -162,8 +160,6 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.1.0)
   shoulda
-  shoulda-context
-  shoulda-matchers
   sqlite3
   turn
   uglifier

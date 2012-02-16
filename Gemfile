@@ -23,6 +23,7 @@ gem 'haml'
 group :test, :development do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'rspec-rails'
   gem 'shoulda'
   gem 'minitest'
   gem 'capybara'

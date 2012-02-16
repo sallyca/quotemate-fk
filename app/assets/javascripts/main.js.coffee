@@ -1,0 +1,2 @@
+$ ->
+  $(".fancy-link").fancybox();

@@ -1,0 +1,15 @@
+%p#notice
+  = notice
+
+%h3
+  = @book.author.name unless @book.author.blank?
+%h2
+  = @book.title
+  
+%table
+  - @book.quotes.each do |quote|
+    %tr
+      %td.quote
+        = quote.text
+
+= link_to 'Пойдем назад', quotes_path

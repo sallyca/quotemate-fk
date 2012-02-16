@@ -1,5 +1,5 @@
 %h1
-  ="Listing books"
+  ="Откуда это всё"
 
 %table
 - @books.each do |book|
@@ -9,5 +9,6 @@
     %td= book.cover_id
 
 %br
-
-= link_to 'New Book', new_book_path
+%br
+%br
+= link_to 'Добавить источник', new_book_path

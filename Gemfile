@@ -18,6 +18,7 @@ end
 
 gem 'jquery-rails'
 gem 'haml'
+gem 'pg'
 
 
 group :test, :development do

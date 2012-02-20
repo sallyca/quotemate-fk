@@ -25,7 +25,7 @@ class QuotesController < ApplicationController
   # GET /quotes/new.json
   def new
     @quote = Quote.new
-
+    3.times {@quote.tags.build}
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @quote }

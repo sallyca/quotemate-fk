@@ -59,3 +59,7 @@ a.submit:hover, form input[type='submit']:hover{
    background: -moz-linear-gradient(top,  #b792b1,  #675264);
    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b792b1', endColorstr='#675264');
 }
+
+a.submit:visited, form input[type='submit']:visited{
+  color: white;  
+}

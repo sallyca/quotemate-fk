@@ -7,8 +7,9 @@
     %td= book.title
     %td= book.author_id
     %td= book.cover_id
+    %br
 
 %br
 %br
 %br
-= link_to 'Добавить источник', new_book_path
+= link_to 'Добавить источник', new_book_path, {:class => "submit"}

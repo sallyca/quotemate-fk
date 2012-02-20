@@ -6,4 +6,12 @@ class Quote < ActiveRecord::Base
   validates :text, :presence => true
   validates :text, :length => {:maximum => 250 }
 
+  def book_title
+    book.try(:title)
+  end
+
+  def book_title=(title)
+    self.book= Book.find_by_title(title) if title.present?
+  end
+
 end

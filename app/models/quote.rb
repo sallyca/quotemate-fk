@@ -5,13 +5,18 @@ class Quote < ActiveRecord::Base
 
   validates :text, :presence => true
   validates :text, :length => {:maximum => 250 }
+  attr_reader :tag_tokens
 
   def book_title
     book.try(:title)
   end
 
   def book_title=(title)
-    self.book= Book.find_by_title(title) if title.present?
+    self.book = Book.find_by_title(title) if title.present?
+  end
+
+  def tag_tokens=(ids)
+    self.tag_ids = ids.split(",")
   end
 
 end

@@ -24,9 +24,7 @@
   %br
   =link_to "Ах да, теги...", "#",{:class => "notice", :id => "tag-notice"}
   .field-hidden{:style => "display:none;", :id => "tag-field-hidden"}
-    - f.fields_for :tags do |tag_form|
-      ="Keyword:"
-      = tag_form.text_field :keyword
+    =f.text_field :tag_tokens,{:id => "quote_tag_tokens"}
           
 
   .actions

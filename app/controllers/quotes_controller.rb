@@ -5,6 +5,8 @@ class QuotesController < ApplicationController
     if params[:tag].present?
       tag = Tag.find(params[:tag])
       @quotes = tag.quotes
+    elsif params[:book].present?
+      @quotes = Book.find(params[:book]).quotes
     else
       @quotes = Quote.all
     end

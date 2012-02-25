@@ -12,7 +12,7 @@ class Quote < ActiveRecord::Base
   end
 
   def book_title=(title)
-    self.book = Book.find_by_title(title) if title.present?
+    self.book = Book.find_or_create_by_title(title) if title.present?
   end
 
   def tag_tokens=(ids)

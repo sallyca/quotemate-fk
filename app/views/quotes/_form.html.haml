@@ -19,12 +19,12 @@
   .field-hidden{:style => "display:none;", :id => "book-field-hidden"}
     = f.label "Книга (название, например)"
     %br
-    = f.collection_select :book_id, Book.all, :id, :title, :prompt => true
+    = f.text_field :book_title, data: {autocomplete_source: Book.order(:title).map(&:title)}
 
   %br
   =link_to "Ах да, теги...", "#",{:class => "notice", :id => "tag-notice"}
   .field-hidden{:style => "display:none;", :id => "tag-field-hidden"}
-    =f.text_field :tag_tokens,{:id => "quote_tag_tokens"}
+    =f.text_field :tag_tokens, {:id => "quote_tag_tokens"}
           
 
   .actions

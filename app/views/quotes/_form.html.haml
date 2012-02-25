@@ -17,7 +17,7 @@
   =link_to "Может, это из книги?", "#",{:class => "notice", :id=>"book-notice"}
   
   .field-hidden{:style => "display:none;", :id => "book-field-hidden"}
-    = f.label "Книга (название, например)"
+    = f.label "Источник (фильм, книга, etc  — название, например)"
     %br
     = f.text_field :book_title, data: {autocomplete_source: Book.order(:title).map(&:title)}
 

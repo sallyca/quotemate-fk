@@ -1,7 +1,3 @@
-class BookItem
-  attr_accessor :title, :author, :image_url, :description
-end
-
 namespace :parse do
 
   require 'nokogiri'
@@ -19,7 +15,7 @@ namespace :parse do
         book.xpath("//td[@class='Description']").each do |book_link|
           puts "+1 book"
           l = lambda {|xpath| book_link.at_xpath(xpath).to_s.strip}
-          book_item= Book.new
+          book_item = Book.new
           book_item.author =  Author.find_or_create_by_name(l.call("p[@class='Author']/text()"))
           book_item.title = l.call("h3/a/text()")
           puts book_item.title
@@ -27,6 +23,5 @@ namespace :parse do
           books << book_item
         end
       end
-
   end
 end

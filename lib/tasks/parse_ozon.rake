@@ -18,7 +18,7 @@ namespace :parse do
         book =  Nokogiri::HTML(open("http://www.ozon.ru"+row.to_s.strip))
         book.xpath("//td[@class='Description']").each do |book_link|
           puts "+1 book"
-          l = lambda {|xpath| book_link.at_xpath(xpath).to_s.strip.encode!('UTF-8', 'UTF-8', :invalid => :replace)}
+          l = lambda {|xpath| book_link.at_xpath(xpath).to_s.strip}
           book_item= Book.new
           book_item.author =  Author.find_or_create_by_name(l.call("p[@class='Author']/text()"))
           book_item.title = l.call("h3/a/text()")

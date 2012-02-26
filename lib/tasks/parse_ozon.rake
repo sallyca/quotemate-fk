@@ -19,9 +19,11 @@ namespace :parse do
         book.xpath("//td[@class='Description']").each do |book_link|
           puts "+1 book"
           l = lambda {|xpath| book_link.at_xpath(xpath).to_s.strip}
-          book_item= BookItem.new
-          book_item.title =  l.call("p[@class='Author']/text()")
+          book_item= Book.new
+          book_item.author =  Author.find_or_create_by_name(l.call("p[@class='Author']/text()"))
+          book_item.title = l.call("h3/a/text()")
           puts book_item.title
+          book_item.save unless Book.find_by_title(book_item.title)
           books << book_item
         end
       end

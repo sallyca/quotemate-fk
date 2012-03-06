@@ -24,7 +24,7 @@
   %br
   =link_to "Ах да, теги...", "#",{:class => "notice", :id => "tag-notice"}
   .field-hidden{:style => "display:none;", :id => "tag-field-hidden"}
-    =f.text_field :tag_tokens, {:id => "quote_tag_tokens"}
+    =f.text_field :tag_tokens, data: {autocomplete_source: Tag.order(:keyword).map(&:keyword)}
           
 
   .actions

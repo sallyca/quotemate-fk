@@ -11,7 +11,7 @@ namespace :parse do
       books = Array.new
       doc.xpath("//div[@class='catBox']/h3/a/@href").each do |row|
         puts "#{row} opened"
-        book =  Nokogiri::HTML(open("http://www.ozon.ru"+row.to_s.strip))
+        book =  Nokogiri::HTML(open("http://www.ozon.ru" + row.to_s.strip))
         book.xpath("//td[@class='Description']").each do |book_link|
           puts "+1 book"
           l = lambda {|xpath| book_link.at_xpath(xpath).to_s.strip}

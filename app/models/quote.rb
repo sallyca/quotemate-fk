@@ -15,8 +15,8 @@ class Quote < ActiveRecord::Base
     self.book = Book.find_or_create_by_title(title) if title.present?
   end
 
-  def tag_tokens=(ids)
-    self.tag_ids = ids.split(",")
+  def tag_tokens=(keyword)
+    self.tags << Tag.find_or_create_by_keyword(keyword) if keyword.present?
   end
 
 end

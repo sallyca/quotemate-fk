@@ -8,10 +8,10 @@
     %tr
       %td.quote
         = quote.text
-  -unless params[:tag].present?
-    %tr
-      %td.tags
-        - quote.tags.each do |tag|
-          =link_to "##{tag.keyword}", tag
+    -unless params[:tag].present?
+      %tr
+        %td.tags
+          - quote.tags.each do |tag|
+            =link_to "##{tag.keyword}", tag
 %br
   = link_to 'Записать ещё', new_quote_path, {:class => "submit"}

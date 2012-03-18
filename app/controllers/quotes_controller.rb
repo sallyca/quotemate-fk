@@ -2,13 +2,14 @@ class QuotesController < ApplicationController
   # GET /quotes
   # GET /quotes.json
   def index
+    @tag = nil
     if params[:tag].present?
-      tag = Tag.find(params[:tag])
-      @quotes = tag.quotes
+      @tag = Tag.find(params[:tag])
+      @quotes = @tag.quotes
     elsif params[:book].present?
       @quotes = Book.find(params[:book]).quotes
     else
-      @quotes = Quote.all
+      @quotes = Quote.limit(10).order('created_at DESC')
     end
 
     respond_to do |format|

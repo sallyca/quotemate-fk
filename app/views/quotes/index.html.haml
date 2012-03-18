@@ -1,20 +1,17 @@
 %h1
   ="Записано"
+  -if @tag.present?
+    ="##{@tag.keyword}"
 
 %table
   - @quotes.each do |quote|
     %tr
       %td.quote
         = quote.text
-      -# %td
-      -#         = quote.book_id
-      -# %td
-      -#         = link_to 'Show', quote
-      -#       %td
-      -#         = link_to 'Edit', edit_quote_path(quote)
-      -#       %td
-      -#         = link_to 'Destroy', quote, confirm: 'Are you sure?', method: :delete
-
+  -unless params[:tag].present?
+    %tr
+      %td.tags
+        - quote.tags.each do |tag|
+          =link_to "##{tag.keyword}", tag
 %br
-
-= link_to 'Записать ещё', new_quote_path, {:class => "submit"}
+  = link_to 'Записать ещё', new_quote_path, {:class => "submit"}

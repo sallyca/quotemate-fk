@@ -12,6 +12,6 @@
       %tr
         %td.tags
           - quote.tags.each do |tag|
-            =link_to "##{tag.keyword}", tag
+            =link_to "##{tag.keyword}", quotes_path(:tag => tag.id)
 %br
   = link_to 'Записать ещё', new_quote_path, {:class => "submit"}

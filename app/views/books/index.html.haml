@@ -1,12 +1,20 @@
 %h1
   ="Откуда это всё"
 
-%table
-- @books.each do |book|
-  %tr
-    %td= link_to book.title, quotes_path(:book => book.id)
-    %td= book.author_id
-    %td= book.cover_id
+
+- @books = Book.all.group_by{|book| book.title[0]}
+
+-
+- @books.keys.sort.each do |starting_letter|
+  %br
+  %br
+  %h2=starting_letter
+  %table
+  
+  - @books[starting_letter].each do |book|
+    %tr
+      %td= link_to book.title, quotes_path(:book => book.id)
+
     %br
 
 %br

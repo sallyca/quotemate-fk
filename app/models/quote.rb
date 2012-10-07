@@ -4,7 +4,7 @@ class Quote < ActiveRecord::Base
   accepts_nested_attributes_for :tags
 
   validates :text, :presence => true
-  validates :text, :length => {:maximum => 250 }
+  validates :text, :length => {:maximum => 250}
   attr_reader :tag_tokens
 
   def book_title

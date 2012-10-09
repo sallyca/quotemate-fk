@@ -6,9 +6,9 @@
         = "prohibited this book from being saved:"
 
       %ul
-        - @book.errors.full_messages.each do |msg|
-          %li
-            = msg
+      - @book.errors.full_messages.each do |msg|
+        %li
+          = msg
 
   .field
     = f.label :title
@@ -23,4 +23,4 @@
     = f.number_field :cover_id
 
   .actions
-    = f.submit, {:class=>"submit"}
+    = f.submit "Пишем", {:class=>"submit"}

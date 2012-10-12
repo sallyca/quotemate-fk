@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  image_mime_type: MyString
+  image_name: MyString
+  image_size: 1
+  image_width: 1
+  image_height: 1
+  image_uid: MyString
+  image_ext: MyString
+  entity_id: 1
+  entity_type: MyString
+
+two:
+  image_mime_type: MyString
+  image_name: MyString
+  image_size: 1
+  image_width: 1
+  image_height: 1
+  image_uid: MyString
+  image_ext: MyString
+  entity_id: 1
+  entity_type: MyString

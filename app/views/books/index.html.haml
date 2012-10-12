@@ -13,7 +13,7 @@
   
   - @books[starting_letter].each do |book|
     %tr
-      %td= link_to book.title, quotes_path(:book => book.id)
+      %td= link_to book.title, book
       -if book.quotes!=nil
         %td= link_to book.quotes.count, quotes_path(:book => book.id)
 

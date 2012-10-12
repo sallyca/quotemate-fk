@@ -1,9 +1,12 @@
 %p#notice
   = notice
 
-%h3
+.img
+  = image_fu(@source.image)
+
+%h3.book-title
   = @book.author.name unless @book.author.blank?
-%h2
+%h2.book-title
   = @book.title
   
 %table

@@ -1,4 +1,4 @@
-namespace :parse do
+namespace :scrape do
 
   require 'nokogiri'
   require 'open-uri'
@@ -16,7 +16,7 @@ namespace :parse do
       book.xpath("//td[@class='Description']").each do |book_link|
         puts "+1 book"
         l = lambda {|xpath| book_link.at_xpath(xpath).to_s.strip}
-        book_item = Source.new
+        book_item = Book.new
         book_item.author =  Author.find_or_create_by_name(l.call("p[@class='Author']/text()"))
         book_item.title = l.call("h3/a/text()")
         book_item.genre = l.call("h1[@class='mainText']/text()")
@@ -38,7 +38,7 @@ namespace :parse do
           puts "image_url = #{book_item.image.image_url}"
         end
 
-        book_item.save unless Source.find_by_title(book_item.title)
+        book_item.save unless Book.find_by_title(book_item.title)
         books << book_item
         sleep 5
       end

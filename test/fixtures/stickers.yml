@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  quote_id: 1
+  color: MyString
+  font: MyString
+  font-size: 1
+
+two:
+  quote_id: 1
+  color: MyString
+  font: MyString
+  font-size: 1

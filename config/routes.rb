@@ -1,5 +1,7 @@
 Bookmate::Application.routes.draw do
 
+  resources :stickers
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

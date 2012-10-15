@@ -1,0 +1,33 @@
+<%= form_for(@sticker) do |f| %>
+  <% if @sticker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sticker.errors.count, "error") %> prohibited this sticker from being saved:</h2>
+
+      <ul>
+      <% @sticker.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :quote_id %><br />
+    <%= f.number_field :quote_id %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :font %><br />
+    <%= f.text_field :font %>
+  </div>
+  <div class="field">
+    <%= f.label :font-size %><br />
+    <%= f.number_field :font-size %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

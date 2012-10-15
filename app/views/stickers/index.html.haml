@@ -1,0 +1,30 @@
+%h1="Listing stickers"
+
+%table
+  %tr
+    %th="Quote"
+    %th="Color"
+    %th="Font"
+    %th="Font-size"
+    %th
+    %th
+    %th
+
+- @stickers.each do |sticker|
+  %tr
+    %td
+      = sticker.quote_id
+    %td
+      = sticker.color
+    %td
+      = sticker.font
+    %td
+      = sticker.font-size
+    %td
+      = link_to 'Show', sticker
+    %td
+      = link_to 'Edit', edit_sticker_path(sticker)
+    %td
+      = link_to 'Destroy', sticker, confirm: 'Are you sure?', method: :delete
+
+= link_to 'New Sticker', new_sticker_path

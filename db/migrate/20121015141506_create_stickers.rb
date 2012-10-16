@@ -4,7 +4,7 @@ class CreateStickers < ActiveRecord::Migration
       t.integer :quote_id
       t.string :color
       t.string :font
-      t.integer :font-size
+      t.integer :font_size
 
       t.timestamps
     end

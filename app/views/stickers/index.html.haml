@@ -1,4 +1,4 @@
-%h1="Listing stickers"
+%h1="Доска липучек"
 
 %table
   %tr
@@ -19,7 +19,7 @@
     %td
       = sticker.font
     %td
-      = sticker.font-size
+      = sticker.font_size
     %td
       = link_to 'Show', sticker
     %td
@@ -27,4 +27,10 @@
     %td
       = link_to 'Destroy', sticker, confirm: 'Are you sure?', method: :delete
 
-= link_to 'New Sticker', new_sticker_path
+#sticker-board
+
+#new-sticker 
+  =link_to 'Приклеить ещё', "#new_sticker_form"
+
+=render :partial => "sticker"
+=render "new_sticker"

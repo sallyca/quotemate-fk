@@ -5,32 +5,31 @@
     %th="Quote"
     %th="Color"
     %th="Font"
-    %th="Font-size"
+    %th="Font_size"
     %th
     %th
     %th
 
-- @stickers.each do |sticker|
-  %tr
-    %td
-      = sticker.quote_id
-    %td
-      = sticker.color
-    %td
-      = sticker.font
-    %td
-      = sticker.font_size
-    %td
-      = link_to 'Show', sticker
-    %td
-      = link_to 'Edit', edit_sticker_path(sticker)
-    %td
-      = link_to 'Destroy', sticker, confirm: 'Are you sure?', method: :delete
+  - @stickers.each do |sticker|
+    %tr
+      %td
+        = sticker.quote.text unless sticker.quote.nil?
+      %td
+        = sticker.color
+      %td
+        = sticker.font
+      %td
+        = sticker.font_size
+      %td
+        = link_to 'Show', sticker
+      %td
+        = link_to 'Edit', edit_sticker_path(sticker)
+      %td
+        = link_to 'Destroy', sticker, confirm: 'Are you sure?', method: :delete
 
 #sticker-board
 
-#new-sticker 
-  =link_to 'Приклеить ещё', "#new_sticker_form"
+  =link_to 'Приклеить ещё', "#new_sticker_form",{:id=>"new-sticker"}
 
 =render :partial => "sticker"
 =render "new_sticker"

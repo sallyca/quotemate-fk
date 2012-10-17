@@ -1,11 +1,8 @@
 %div{:style =>"display:none;"}
   #new_sticker_form
     = form_for(Sticker.new) do |f|
-
-
-      .field
-        =f.text_field :quotes, data: {autocomplete_source: Quote.order(:text).map(&:text)}
-          
+      #sticker-quote-complete
+        =f.text_field :quotes, data: {autocomplete_source: Quote.order(:text).map(&:text)}         
 
       .actions
         = f.submit

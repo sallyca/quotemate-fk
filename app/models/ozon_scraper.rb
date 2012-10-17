@@ -3,7 +3,7 @@ class OzonScraper
   require 'nokogiri'
   require 'open-uri'
 
-  def  parse_books
+  def parse_books
     yaml = YAML.load(File.read("lib/bookmate-dump.yml"))
     doc = Nokogiri::HTML(open(yaml["sally"]))
     books = Array.new
@@ -28,7 +28,6 @@ class OzonScraper
       books << book_item
       sleep 10
     end
-
   end
 
 end

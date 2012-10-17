@@ -1,6 +1,7 @@
 require 'test_helper'
 
-OzonScraperTest < ActiveSupport::TestCase
+OzonScraperTest  < ActiveSupport::TestCase
+  
   # test "the truth" do
   #   assert true
   # end

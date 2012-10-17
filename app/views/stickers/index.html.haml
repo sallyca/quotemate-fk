@@ -25,10 +25,9 @@
       %td
         = link_to 'Edit', edit_sticker_path(sticker)
       %td
-        = link_to 'Destroy', sticker, confirm: 'Are you sure?', method: :delete
+        = link_to 'В топку', sticker, confirm: 'Are you sure?', method: :delete
 
 #sticker-board
-
   =link_to 'Приклеить ещё', "#new_sticker_form",{:id=>"new-sticker"}
 
 =render :partial => "sticker"

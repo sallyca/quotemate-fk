@@ -1,0 +1,12 @@
+= semantic_form_for [:admin, @book] do |f|
+  = f.inputs "General" do
+    = f.input :title
+    = f.input :human_id, :as => :string
+
+  - f.object.build_image unless f.object.image
+  = f.inputs "Image", :for => :image do |f_i|
+    - if f_i.object.image
+      %li= image_fu(f.object.image)
+    = f_i.input :image, :as => :file
+
+  = f.buttons

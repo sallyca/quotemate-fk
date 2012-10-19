@@ -1,7 +1,7 @@
 #encoding: UTF-8
-ActiveAdmin.register Book do
+ActiveAdmin.register Mindmap do
 
-  menu :label => "Источники", :priority => 2
+  menu :label => "Mindmaps", :priority => 2
 
   form :partial => "form"
 

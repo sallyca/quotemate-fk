@@ -16,6 +16,7 @@ jQuery ->
       id: "name" + i
     )).appendTo "#sticker-board"
     i++
+    $('#new_sticker').submit();
   
   Draw = (scope) ->
     new_sticker = scope.find("#new-sticker")

@@ -1,4 +1,5 @@
 ---
+color.png: color-000730cc76011e3028826e564eb46c4c.png
 fancybox/blank.gif: fancybox/blank-1f7e2fe6d0bdf3fd6efea93f82ce3b70.gif
 fancybox/fancy_close.png: fancybox/fancy_close-742a2174d133aa44858873b43f94970c.png
 fancybox/fancy_loading.png: fancybox/fancy_loading-77828c555207b33e37b155b8eef728a7.png
@@ -32,8 +33,8 @@ active_admin/nested_menu_arrow_dark.gif: active_admin/nested_menu_arrow_dark-373
 active_admin/orderable.png: active_admin/orderable-312cf8ad195f38825b0fb3d7447aef58.png
 jquery-ui.min.js: jquery-ui.min-4258e47b40673a02bedfda178628bfba.js
 jquery.min.js: jquery.min-17322428695737103f15e8b9db8b5909.js
-application.js: application-497559edce066dbcfd3813b790009723.js
-application.css: application-e8faf61921140e832c64d5969fe01737.css
+application.js: application-f817f3f61f69875ac0e5eb9563278793.js
+application.css: application-b3628953426f8c866a07457414a87cba.css
 active_admin/application.js: active_admin/application-a05b0bf250576440ff9842e74764d8de.js
 active_admin.js: active_admin-e7db8419d25435904338fde0408a0b97.js
 active_admin.css: active_admin-33ae0ff48187a338dddf7da0d3d38ff9.css

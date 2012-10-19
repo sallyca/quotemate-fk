@@ -14,6 +14,7 @@ jQuery ->
       id: "sticker" + i
     ).append($("<label />",
       id: "name" + i
+    ).text($("#sticker-quote-complete").text()
     )).appendTo "#sticker-board"
     i++
     $('#new_sticker').submit();

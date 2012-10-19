@@ -1,7 +1,7 @@
 #encoding: UTF-8
 ActiveAdmin.register Mindmap do
 
-  menu :label => "Mindmaps", :priority => 2
+  menu :label => "Mindmaps", :priority => 4
 
   form :partial => "form"
 

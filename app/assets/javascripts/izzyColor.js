@@ -2,7 +2,7 @@
 
 ;
 if(typeof imageUrl === 'undefined')
-	var imageUrl='editor_images/color.png';
+	var imageUrl='/assets/color.png';
 	
 var copyHTML='<a href="http://www.izzywebsite.com/tools" target="_blank" style="background:#000;text-align:center;margin-top:1px;display:block;color:#ccc;font:10px Arial, Helvetica, sans-serif;text-decoration:none">ColorPicker by Izzy Tools</a>';
 

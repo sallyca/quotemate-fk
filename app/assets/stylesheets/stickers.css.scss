@@ -2,13 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .sticker-back{
-  height:200px;
-  width:250px;
+  height: 200px;
+  width: 250px;
   border: 1px solid #999;
   background-color: #ffbbea;
+  margin: 10px;
 }
 
 #new_sticker_form{
   width: 500px;
   height: 500px;
+}
+
+.color-picker{
+  background-image: url('/assets/color.png');
+  width:15px;
+  height:15px;
 }

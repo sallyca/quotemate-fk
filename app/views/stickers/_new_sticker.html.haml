@@ -2,7 +2,7 @@
   #new_sticker_form
     = form_for(Sticker.new) do |f|
       #sticker-quote-complete
-        =f.text_field :quotes, data: {autocomplete_source: Quote.order(:text).map(&:text)}, :length=> 250         
+        =f.text_area :quotes, data: {autocomplete_source: Quote.order(:text).map(&:text)}, :length=> 250         
 
       #create-sticker
         =link_to "Налепить", "#"

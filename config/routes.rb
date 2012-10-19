@@ -1,6 +1,8 @@
 Bookmate::Application.routes.draw do
 
-  resources :stickers
+  resources :stickers do
+    get 'random_quotes'
+  end
 
   ActiveAdmin.routes(self)
 

@@ -1,5 +1,4 @@
 .sticker-back
   .sticker-text
-    ="(sticker text)"
-  ="(sticker settings)"
+    =sticker.quote.text if sticker && sticker.quote
   = text_field_tag "color", "",{:class=>"izzyColor"}

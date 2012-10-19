@@ -22,5 +22,5 @@
 #sticker-board
   =link_to 'Приклеить ещё', "#new_sticker_form",{:id=>"new-sticker"}
 
-=render :partial => "sticker"
+=render :partial => "sticker", :sticker => Sticker.first
 =render "new_sticker"

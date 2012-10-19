@@ -1,2 +1,5 @@
 #sticker-board
-  =link_to 'Приклеить ещё', "#new_sticker_form",{:id=>"new-sticker"}
+  =link_to 'Приклеить ещё', "#new_sticker_form", {:id=>"new-sticker"}
+
+- Quote.limit(10).each do |quote|
+  =render "sticker", :sticker => Sticker.new(:quote => quote)

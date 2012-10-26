@@ -1,5 +1,5 @@
 .sticker-back
   .sticker-text
     =sticker.quote.text if sticker && sticker.quote
-  .sticker-color
-    = text_field_tag "color", "",{:class=>"izzyColor"}
+  .sticker-color 
+    = text_field_tag "color","", {:size => 0, :class=>"izzyColor", :id=>"color#{sticker.id}"}

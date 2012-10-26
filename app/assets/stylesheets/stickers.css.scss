@@ -7,6 +7,7 @@
   border: 1px solid #999;
   background-color: #ffbbea;
   margin: 10px;
+  position: relative; 
 }
 
 #new_sticker_form{
@@ -27,10 +28,19 @@
   width: 400px;
  }
 
- #sticker-board{
+ #sticker-board {
 
  }
 
- .sticker{
+ .izzyColor{
+  background-color: #ffbbea;
+  border:0;
+ }
+
+ .sticker {
   float:left;
+ }
+
+ .sticker-color{
+   position: absolute; bottom: 0; right: 0;
  }

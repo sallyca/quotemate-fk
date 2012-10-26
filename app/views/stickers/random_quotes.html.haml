@@ -1,5 +1,5 @@
+=link_to "Мне повезёт", random_quotes_stickers_path, {:class=> "submit"}
 #sticker-board
-  =link_to 'Ещё', "#new_sticker_form", {:id=>"new-sticker", :class=>"submit"}
 
 - Quote.order("RANDOM()").limit(7).each do |quote|
   .sticker

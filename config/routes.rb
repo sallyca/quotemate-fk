@@ -1,7 +1,7 @@
 Bookmate::Application.routes.draw do
 
   resources :stickers do
-    get 'random_quotes'
+    get 'random_quotes', :on => :collection
   end
 
   ActiveAdmin.routes(self)

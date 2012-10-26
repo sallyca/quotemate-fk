@@ -8,7 +8,7 @@ jQuery ->
     source: $("#sticker-quote-complete").data('autocomplete-source')
 
   i = 1
-  $("#create-sticker").click ->
+  $("#create-sticker").click(e) ->
     $("<div />",
       class: "sticker-back"
       id: "sticker" + i
@@ -18,6 +18,7 @@ jQuery ->
     )).appendTo "#sticker-board"
     i++
     $('#new_sticker').submit();
+    
   
   Draw = (scope) ->
     new_sticker = scope.find("#new-sticker")

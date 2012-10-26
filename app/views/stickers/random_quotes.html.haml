@@ -1,7 +1,7 @@
 #sticker-board
   =link_to 'Ещё', "#new_sticker_form", {:id=>"new-sticker", :class=>"submit"}
 
-- Quote.limit(10).each do |quote|
+- Quote.order("RANDOM()").limit(7).each do |quote|
   .sticker
     =render "sticker", :sticker => Sticker.new(:quote => quote)
 

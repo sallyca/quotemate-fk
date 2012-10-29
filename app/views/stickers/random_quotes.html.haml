@@ -1,7 +1,7 @@
 =link_to "Мне повезёт", random_quotes_stickers_path, {:class=> "submit"}
 #sticker-board
 
-- Quote.order("RANDOM()").limit(7).each do |quote|
+- Quote.order("RANDOM()").limit(9).each do |quote|
   .sticker
     =render "sticker", :sticker => Sticker.new(:quote => quote)
 

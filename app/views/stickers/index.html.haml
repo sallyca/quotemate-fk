@@ -20,6 +20,6 @@
         = link_to 'В топку', sticker, confirm: 'Are you sure?', method: :delete
 
 #sticker-board
-  =link_to 'Приклеить ещё', "#new_sticker_form",{:id=>"new-sticker"}
+  =link_to 'Приклеить ещё', "#new_sticker_form",{:id => "new-sticker", :class => "submit"}
 
 =render "new_sticker"

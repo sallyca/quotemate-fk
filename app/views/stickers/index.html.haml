@@ -1,25 +1,13 @@
 %h1="Доска липучек"
 
 =link_to "Мне повезёт", random_quotes_stickers_path, {:class=> "submit"}
-%table
-  %tr
-    %th=""
-    %th
-    %th
-    %th
-
-  - @stickers.each do |sticker|
-    %tr
-      %td
-        = sticker.quote.text unless sticker.quote.nil?
-      %td
-        = link_to 'Ещё, ещё', sticker
-      %td
-        = link_to 'Change it', edit_sticker_path(sticker)
-      %td
-        = link_to 'В топку', sticker, confirm: 'Are you sure?', method: :delete
 
 #sticker-board
-  =link_to 'Приклеить ещё', "#new_sticker_form",{:id => "new-sticker", :class => "submit"}
+  - @stickers.each do |sticker|
+    .sticker
+      =render "sticker", :sticker => sticker
+.clearfix
+
+=link_to 'Приклеить ещё', "#new_sticker_form", {:id => "new-sticker-submit", :class => "submit"}
 
 =render "new_sticker"

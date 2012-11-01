@@ -1,6 +1,6 @@
 %div{:style =>"display:none;"}
   #new_sticker_form
-    = form_for(Sticker.new) do |f|
+    = form_for(@sticker) do |f|
       #sticker-quote-complete
         =f.text_area :quotes, data: {autocomplete_source: Quote.order(:text).map(&:text)}
-        =link_to "Налепить", "#", {:class => "submit centered"}
+        =link_to "Налепить", "#", {:class => "submit centered", :id => "create-sticker"}

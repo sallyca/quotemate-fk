@@ -13,3 +13,8 @@
   font-color: #FF3399;
   margin-top: 20px;
 }
+.clearfix:before, .clearfix:after {
+  content: "&nbsp;"; display: block; height: 0; visibility: hidden; 
+} 
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }

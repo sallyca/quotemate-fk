@@ -3,6 +3,6 @@
 
 - Quote.order("RANDOM()").limit(9).each do |quote|
   .sticker
-    =render "sticker", :sticker => Sticker.new(:quote => quote)
+    =render "sticker", {:sticker => Sticker.new(:quote => quote), :color=> "pink"}
 
 =render "new_sticker"

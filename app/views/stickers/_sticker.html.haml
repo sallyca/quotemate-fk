@@ -1,5 +1,5 @@
-.sticker-back
+%div{:class=> "sticker-back #{color}"}
   .sticker-text
     =sticker.quote.text if sticker && sticker.quote
   .sticker-color 
-    = text_field_tag "color","", {:size => 0, :class=>"izzyColor", :id=>"color#{sticker.id}"}
+    = text_field_tag "color","", {:size => 0, :class=>"izzyColor #{color}", :id=>"color#{sticker.id}"}

@@ -5,7 +5,7 @@
 #sticker-board
   - @stickers.each do |sticker|
     .sticker
-      =render "sticker", :sticker => sticker
+      =render "sticker", {:sticker => sticker, :color=>"green"}
 .clearfix
 
 =link_to 'Приклеить ещё', "#new_sticker_form", {:id => "new-sticker-submit", :class => "submit"}

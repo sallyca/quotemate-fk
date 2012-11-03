@@ -43,6 +43,7 @@
 
 .sticker-back .sticker-color{
   position: absolute; bottom: 0; right: 0;
+  padding:5px;
 }
 
 .sticker-back .sticker-text{
@@ -50,6 +51,7 @@
   font-size:15px;
   padding: 15px;
   float:left;
+  width: 200px;
 }
 
 .sticker-back .trash{

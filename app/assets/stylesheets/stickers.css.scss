@@ -41,16 +41,33 @@
   float:left;
 }
 
-.sticker-color{
+.sticker-back .sticker-color{
   position: absolute; bottom: 0; right: 0;
 }
 
-.sticker-text{
+.sticker-back .sticker-text{
   font-family: Georgia, serif;
   font-size:15px;
   padding: 15px;
+  float:left;
+}
+
+.sticker-back .trash{
+  background-image: url('/assets/icon_trash.png');
+  width: 8px;
+  height: 8px;
+  float: right;
+  padding: 5px;
+}
+
+.sticker-back .trash a{
+  display:block;
+  width: 10px;
+  height:10px;
 }
 
 .green{
   background-color: #40f6ab;
 }
+
+

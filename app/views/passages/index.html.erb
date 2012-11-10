@@ -1,0 +1,25 @@
+<h1>Listing passages</h1>
+
+<table>
+  <tr>
+    <th>Text</th>
+    <th>Book</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @passages.each do |passage| %>
+  <tr>
+    <td><%= passage.text %></td>
+    <td><%= passage.book_id %></td>
+    <td><%= link_to 'Show', passage %></td>
+    <td><%= link_to 'Edit', edit_passage_path(passage) %></td>
+    <td><%= link_to 'Destroy', passage, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Passage', new_passage_path %>

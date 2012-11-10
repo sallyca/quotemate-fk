@@ -1,0 +1,24 @@
+= form_for(@passage) do |f|
+  - if @passage.errors.any?
+    #error_explanation
+    %h2
+      = pluralize(@passage.errors.count, "error")
+      = "prohibited this passage from being saved:"
+
+    %ul
+      - @passage.errors.full_messages.each do |msg|
+        %li
+          = msg
+  .field
+    = f.label "Что пишем"
+    %br
+    = f.text_field :text, :size => 100
+  %br
+  =link_to "Может, это из книги?", "#",{:class => "notice", :id => "book-notice"}
+  
+  .field-hidden{:style => "display:none;", :id => "book-field-hidden"}
+    = f.label "Источник (фильм, книга, etc  — название, например)"
+    %br
+    = f.text_field :book_title, data: {autocomplete_source: Book.order(:title).map(&:title)}
+  .actions
+    = f.submit "В молескин", {:class => "submit"}

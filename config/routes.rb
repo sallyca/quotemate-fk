@@ -1,5 +1,7 @@
 Bookmate::Application.routes.draw do
 
+  resources :passages
+
   resources :stickers do
     get 'random_quotes', :on => :collection
   end

@@ -5,7 +5,7 @@
 
   .top {
     // @include box-shadow(0px 1px 1px rgba(0,0,0,0.1));
-    width: 248px;
+    width: 205px;
     position: relative;
     background-color: #f5f5f5;
     border: 1px solid #d5d5d5;
@@ -108,5 +108,9 @@
     text-align: right;
     z-index: 20;
     padding: 8px;
+
+    a{
+      color: #383838;
+    }
   }
 }

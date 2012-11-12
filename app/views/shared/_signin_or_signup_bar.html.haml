@@ -30,8 +30,8 @@
 
   .bottom
     .btn-group
-      = link_to t(".log_in"), :login, :data => { :link => 'login'}
-      = link_to t(".register"), :register, :data => { :link => 'registration'}
+      = link_to "Зайти", :login, :data => { :link => 'login'}
+      = link_to "Записаться", :register, :data => { :link => 'registration'}
 
 - content_for :js do
   :javascript

@@ -1,0 +1,10 @@
+ru:
+  shared:
+    signin_or_signup_bar:
+      forget_password: Я забыл пароль
+      sign_in: Войти
+      sign_up: Зарегистрироваться
+      log_in: Вход
+      register: Регистрация
+      reg: Зарегистрироваться
+      reg_in_progress: Регистрируемся...

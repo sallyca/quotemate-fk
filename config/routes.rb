@@ -1,11 +1,19 @@
 Bookmate::Application.routes.draw do
 
+  resources :sessions
+
+  resources :users
+
   resources :passages
 
   resources :stickers do
     get 'random_quotes', :on => :collection
   end
 
+  get 'register' => 'users#new', :as => :register
+  get 'login' => 'sessions#new', :as => :login
+  get 'logout' => 'sessions#destroy', :as => :logout
+  
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

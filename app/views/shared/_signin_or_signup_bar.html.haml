@@ -1,0 +1,70 @@
+#signin_or_signup_bar
+  .top
+    .mini-form#login
+      = form_for User.new, :url => :sessions, :method => :post, :html => {:remote => true, :data => {:type => :script}} do |f|
+        .field.text
+          = f.label :email
+          = f.text_field :email
+        .field.text
+          = f.label :password, f.object.class.human_attribute_name(:password), :for => 'login_password'
+          = f.password_field :password, :id => 'login_password'
+        .actions
+          = f.submit t(".sign_in")
+
+    .mini-form#registration
+      = form_for User.new, :html => { :remote => true, :'data-type' => :script } do |f|
+        .field.text
+          = f.label :username
+          = f.text_field :username
+        .field.text
+          = f.label :email
+          = f.text_field :email
+        .field.text
+          = f.label :password
+          = f.password_field :password
+        .field.text
+          = f.label :password_confirmation
+          = f.password_field :password_confirmation
+        .actions
+          = f.submit t(".reg"), :disable_with => t(".reg_in_progress")
+
+  .bottom
+    .btn-group
+      = link_to t(".log_in"), :login, :data => { :link => 'login'}
+      = link_to t(".register"), :register, :data => { :link => 'registration'}
+
+- content_for :js do
+  :javascript
+    $(function() {
+      var scope = $('#signin_or_signup_bar'),
+          effect = 'blind',
+          buttons = scope.find('.bottom .btn'),
+          miniForms = scope.find('.top').children('.mini-form');
+
+      buttons.on('click', function(e) {
+        e.preventDefault();
+
+        var button = $(this),
+            showFormId = $(this).data('link'),
+            visibleForm = miniForms.filter(':visible');
+
+        var showForm = function() {
+          buttons.not($(this)).removeClass('active');
+          button.addClass('active');
+          miniForms.filter('#'+showFormId).show(effect, {}, 300, function() {
+            $(this).find('form input:text').first().focus();
+          });
+        };
+
+        if (visibleForm.attr('id') == showFormId){
+          visibleForm.hide(effect, {}, 300);
+          button.removeClass('active');
+          return ;
+        }
+
+        if (visibleForm.length){
+          visibleForm.hide(effect, {}, 300, function() { showForm(); });
+        } else {
+          showForm();
+        }
+      });

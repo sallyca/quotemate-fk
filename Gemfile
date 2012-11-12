@@ -13,6 +13,8 @@ gem 'rack-cache', :require => 'rack/cache'
 gem 'rack-rewrite'
 gem 'acts_as_indexed'
 gem 'randumb'
+gem 'sorcery'
+gem 'simple_form'
 
 # Gems used only for assets and not required
 # in production environments by default.

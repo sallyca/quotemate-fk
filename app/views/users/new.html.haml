@@ -1,0 +1,23 @@
+= form_for @user do |f|
+  %fieldset
+    %legend= t('.title')
+
+    .control-group
+      = f.label :email
+      .controls
+        = f.text_field :email, :class => 'span3'
+
+    .control-group
+      = f.label "юзернейм"
+      .controls
+        = f.text_field :username, :class => 'span3'
+
+    .control-group
+      = f.label :password
+      .controls
+        = f.password_field :password, :class => 'span3'
+
+
+    .actions
+      = f.submit "Зарегиться", :class => 'btn btn-primary'
+      = f.submit "Нет, спасибо", :type => :reset, :class => 'btn'

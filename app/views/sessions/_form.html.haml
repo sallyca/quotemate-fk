@@ -1,0 +1,13 @@
+= simple_form_for user, :url => :sessions, :method => :post, :remote => true, :html => {:class => "form-horizontal", :data => {:type => :html, :target => "#login_form"}} do |f|
+  %fieldset
+    %legend= t(".login")
+
+    = f.error_notification
+    .offset1
+      = f.input :email, :required => true
+      = f.input :password, :required => true
+
+    .actions
+      = f.submit "Зайти"
+      -# = link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook)
+      -# = link_to 'Login with Twitter', auth_at_provider_path(:provider => :twitter)

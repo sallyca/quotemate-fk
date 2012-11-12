@@ -21,6 +21,7 @@ fancybox/fancybox-x.png: fancybox/fancybox-x-016f37c63e44728ec91a1905065b9ff1.pn
 fancybox/fancybox-y.png: fancybox/fancybox-y-d77dbae7837fcb5209bab94a31924c12.png
 fancybox/fancybox.png: fancybox/fancybox-050ed5c7e0f80e63a8164dbf8232960e.png
 icon_trash.png: icon_trash-3095fcd11b6806d162b848773a3afb63.png
+psycho.jpg: psycho-fd5826ae46b7e9f93e0f9021f7317ea3.jpg
 rails.png: rails-e4b51606cd77fda2615e7439907bfc92.png
 trash.png: trash-04ff09aa22e2aab3a0b78db38b6dd07b.png
 active_admin/admin_notes_icon.png: active_admin/admin_notes_icon-d3076b67b8655afc5cf14bf244c34db5.png
@@ -35,8 +36,8 @@ active_admin/nested_menu_arrow_dark.gif: active_admin/nested_menu_arrow_dark-373
 active_admin/orderable.png: active_admin/orderable-312cf8ad195f38825b0fb3d7447aef58.png
 jquery-ui.min.js: jquery-ui.min-4258e47b40673a02bedfda178628bfba.js
 jquery.min.js: jquery.min-17322428695737103f15e8b9db8b5909.js
-application.js: application-2e1f7b1ec2ab6a5bc2b6f1ddb8b39101.js
-application.css: application-dd580eb8a1da79b126110a9aaa540e0b.css
+application.js: application-b64fad6bc92bcbbc28e062cba8af58e6.js
+application.css: application-ee89d34f63a39329ca50728c3e2c0216.css
 active_admin/application.js: active_admin/application-a05b0bf250576440ff9842e74764d8de.js
 active_admin.js: active_admin-e7db8419d25435904338fde0408a0b97.js
 active_admin.css: active_admin-33ae0ff48187a338dddf7da0d3d38ff9.css

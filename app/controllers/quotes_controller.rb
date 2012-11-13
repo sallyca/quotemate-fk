@@ -12,6 +12,8 @@ class QuotesController < ApplicationController
       @quotes = Quote.limit(10).order('created_at DESC')
     end
 
+    @quotes = @quotes.reject { |quote| quote.user!=current_user  }
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @quotes }
@@ -50,10 +52,11 @@ class QuotesController < ApplicationController
 
   def create
     @quote = Quote.new(params[:quote])
+    @quote.user = current_user
 
     respond_to do |format|
       if @quote.save
-        format.html { redirect_to @quote, notice: 'Quote was successfully created.' }
+        format.html { redirect_to :root, notice: 'Quote was successfully created.' }
         format.json { render json: @quote, status: :created, location: @quote }
       else
         format.html { render action: "new" }

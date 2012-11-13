@@ -3,6 +3,7 @@ class Quote < ActiveRecord::Base
   has_and_belongs_to_many :tags
   accepts_nested_attributes_for :tags
   has_many :stickers
+  belongs_to :user
 
   validates :text, :presence => true
   validates :text, :length => {:maximum => 250}

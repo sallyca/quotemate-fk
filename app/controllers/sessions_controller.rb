@@ -1,14 +1,22 @@
 class SessionsController < ApplicationController
 
+  respond_to :html, :js
+
+  before_filter :require_login, :only => :destroy
+
   def new
   end
 
   def create
-    user = login(params[:email], params[:password])
-    if user
-      redirect_back_or_to root_url, :notice => "Logged in!"
+    logger.info params[:username]
+    logger.info params[:password]
+    user_hash = params[:user] || {}
+    @user = login(user_hash[:username], user_hash[:password])
+    if @user
+      redirect_to root_url, :notice => "Logged in!"
     else
-      flash.now.alert = "Email or password was invalid."
+      logger.info "not logged"
+      redirect_to root_url, :notice => "Not Logged in!"
     end
   end
 

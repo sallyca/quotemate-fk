@@ -1,1 +1,5 @@
-= "this is a stub"
+.user-bar
+  = current_user.username
+  =", "
+  = Quote.first(:order => "RANDOM()").text.downcase
+  

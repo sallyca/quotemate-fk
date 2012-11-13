@@ -16,7 +16,6 @@ class UsersController < ApplicationController
       redirect_to :root, notice => "Ready"
     end
 
-
   end
 
 end

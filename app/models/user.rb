@@ -9,4 +9,12 @@ class User < ActiveRecord::Base
   validates_presence_of :email
   validates_presence_of :username
   validates_uniqueness_of :email
+
+  def to_param
+    username
+  end
+
+  def self.from_param(param)
+    find_by_username param
+  end
 end

@@ -15,6 +15,7 @@ gem 'acts_as_indexed'
 gem 'randumb'
 gem 'sorcery'
 gem 'simple_form'
+gem 'has_unique_slug'
 
 # Gems used only for assets and not required
 # in production environments by default.

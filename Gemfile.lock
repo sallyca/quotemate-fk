@@ -84,6 +84,7 @@ GEM
       actionpack (~> 3.0)
     haml (3.1.4)
     has_scope (0.5.1)
+    has_unique_slug (0.1.6)
     hike (1.2.1)
     httpauth (0.2.0)
     i18n (0.6.0)
@@ -222,6 +223,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.0)
   dragonfly
   haml
+  has_unique_slug
   jquery-rails
   launchy
   minitest

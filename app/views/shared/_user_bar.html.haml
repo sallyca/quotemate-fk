@@ -1,5 +1,5 @@
 .user-bar
   = current_user.username
   =", "
-  = Quote.first(:order => "RANDOM()").text.downcase
+  = Quote.short.first(:order => "RANDOM()").text.downcase
   

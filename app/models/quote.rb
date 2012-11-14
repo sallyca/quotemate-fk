@@ -9,7 +9,7 @@ class Quote < ActiveRecord::Base
   validates :text, :length => {:maximum => 250}
   attr_reader :tag_tokens
 
-  scope :short, where("length(text) < 400")
+  scope :short, where("length(text) < 100")
 
   def book_title
     book.try(:title)

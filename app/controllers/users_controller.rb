@@ -14,7 +14,6 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to :root, notice => "Ready"
     end
-
   end
 
 end

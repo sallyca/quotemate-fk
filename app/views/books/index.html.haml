@@ -1,10 +1,6 @@
 %h1
   ="Откуда это всё"
 
-
-- @books = Book.all.group_by{|book| book.title[0]}
-
--
 - @books.keys.sort.each do |starting_letter|
   %br
   %br

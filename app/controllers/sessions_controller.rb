@@ -8,8 +8,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    logger.info params[:username]
-    logger.info params[:password]
     user_hash = params[:user] || {}
     @user = login(user_hash[:username], user_hash[:password])
     if @user

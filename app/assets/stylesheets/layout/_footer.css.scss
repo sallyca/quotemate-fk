@@ -1,7 +1,15 @@
 #footer{
-  width: 1000px;
+  width: 870px;
   margin-left: auto;
   margin-right:auto;
+
+  #separator{
+    background: asset-data-url('separator.gif') center center no-repeat;
+    width: 870px;
+    height: 18px;
+  margin-left: auto;
+  margin-right:auto;
+  }
 
   .right{
     float:right;

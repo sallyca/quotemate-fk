@@ -35,6 +35,7 @@ group :test, :development do
   # Pretty printed test output
   gem 'turn', :require => false
   gem 'rspec-rails'
+  gem "factory_girl_rails", "~> 1.6.0"
   gem 'shoulda'
   gem 'minitest'
   gem 'capybara'

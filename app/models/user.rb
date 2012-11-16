@@ -17,4 +17,9 @@ class User < ActiveRecord::Base
   def self.from_param(param)
     find_by_username param
   end
+
+  def online?
+    Time.now < (last_activity_at + 10.minutes) if last_activity_at
+  end
+  
 end

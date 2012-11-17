@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  
   authenticates_with_sorcery!
   has_many :quotes
   has_many :stickers
@@ -21,5 +22,5 @@ class User < ActiveRecord::Base
   def online?
     Time.now < (last_activity_at + 10.minutes) if last_activity_at
   end
-  
+
 end

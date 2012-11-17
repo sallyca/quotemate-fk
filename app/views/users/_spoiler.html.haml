@@ -1,0 +1,28 @@
+.user-spoiler.clearfix
+  .left-side
+    = link_to user_avatar(user), user, :class => "avatar"
+    .nickname
+      = link_to user.nickname, user
+      = link_to icon('pencil'), [:edit, user] if user == current_user
+    .rating
+      - if user.position
+        - if logged_in? && current_user == user
+          = t(".on_th_place_html", :position => user.position)
+        - else
+          = t(".you_on_th_place_html", :position => user.position)
+      - else
+        = t(".doesnt_take_part")
+      = t(".in")
+      = link_to t(".in_authors_rating"), :users
+  = vote_counter(user)
+  .date-statuses.right
+    .created_at
+      = t(".on_site")
+      %span= time_ago_in_words user.created_at.to_date
+    - if user.last_activity_at
+      .online_status
+        - if user.online?
+          %span.online= t(".on_site_now")
+        - else
+          = t(".last_vizit")
+          %span.offline= time_ago_in_words user.last_activity_at

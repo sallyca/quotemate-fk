@@ -1,0 +1,34 @@
+- title "#{t(".profile")} #{@user.username}"
+
+= section_title link_to("#{t(".profile")} #{@user.username}", @user), :sub_title => (t(".its_you") if @user == current_user)
+= render '/users/spoiler', :user => @user
+= render '/users/tabs', :user => @user
+
+.user-info
+  .left-side{ :style => 'float:left;width:49%;' }
+    %dl
+      - if @user.country || @user.city
+        %dt= t(".location")
+        %dd
+          - if @user.country
+            #{@user.country.title}#{"," if @user.city}
+          = @user.city if @user.city
+      - if @user.birthday
+        %dt= t(".age")
+        %dd= time_ago_in_words @user.birthday
+      - unless @user.vk.blank? && @user.facebook.blank? && @user.skype.blank?
+        %dt= t(".contacts")
+        %dd
+          - unless @user.vk.blank?
+            = link_to icon('vk'), "http://vk.com/#{@user.vk}", :target => '_blank'
+          - unless @user.facebook.blank?
+            = link_to icon('facebook'), "http://www.facebook.com/#{@user.facebook}", :target => '_blank'
+          - unless @user.skype.blank?
+            = link_to icon('skype'), "skype:#{@user.skype}?chat"
+    .clearfix
+  .right-side{ :style => 'float:right;width:49%' }
+    - unless @user.about.blank?
+      %dl
+        %dt= t(".about")
+        %dd= @user.about
+  .clearfix

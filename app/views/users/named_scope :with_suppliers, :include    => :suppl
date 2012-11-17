@@ -1,0 +1,2 @@
+named_scope :with_suppliers, :include    => :suppliers, 
+                             :conditions => "suppliers.id IS NOT NULL"

@@ -1,17 +1,17 @@
-%h1
-  ="Записано"
+.left-content
   -if @tag.present?
     ="##{@tag.keyword}"
 
-%table
-  - @quotes.each do |quote|
-    %tr
-      %td.quote
-        = quote.text
-    -unless params[:tag].present?
+  %table
+    - @quotes.each do |quote|
       %tr
-        %td.tags
-          - quote.tags.each do |tag|
-            =link_to "##{tag.keyword}", quotes_path(:tag => tag.id)
-%br
-  = link_to 'Записать ещё', new_quote_path, {:class => "submit"}
+        %td.quote
+          = quote.text
+      -unless params[:tag].present?
+        %tr
+          %td.tags
+            - quote.tags.each do |tag|
+              =link_to "##{tag.keyword}", quotes_path(:tag => tag.id)
+.right-content
+  = link_to 'Добавить ещё', new_quote_path, {:id=>"add-quote", :class => "submit"}
+.clearfix

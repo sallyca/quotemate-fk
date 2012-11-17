@@ -1,15 +1,13 @@
-%h1
-  ="Записано"
-  -if @tag.present?
-    ="##{@tag.keyword}"
-
-%table
-  - @user.quotes.each do |quote| 
-    %tr
-      %td.quote
-        = quote.text
-    -unless params[:tag].present?
+.left-menu
+  = link_to user_avatar(user), user, :class => "avatar"
+.right-content
+  %table
+    - @user.quotes.each do |quote| 
       %tr
-        %td.tags
-          - quote.tags.each do |tag|
-            =link_to "##{tag.keyword}", quotes_path(:tag => tag.id)
+        %td.quote
+          = quote.text
+      -unless params[:tag].present?
+        %tr
+          %td.tags
+            - quote.tags.each do |tag|
+              =link_to "##{tag.keyword}", quotes_path(:tag => tag.id)

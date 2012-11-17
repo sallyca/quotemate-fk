@@ -1,4 +1,5 @@
 ---
+blue-button.png: blue-button-05e489c589aaf04b52c643f4ea367aa6.png
 color.png: color-000730cc76011e3028826e564eb46c4c.png
 fancybox/blank.gif: fancybox/blank-1f7e2fe6d0bdf3fd6efea93f82ce3b70.gif
 fancybox/fancy_close.png: fancybox/fancy_close-742a2174d133aa44858873b43f94970c.png
@@ -38,7 +39,7 @@ active_admin/orderable.png: active_admin/orderable-312cf8ad195f38825b0fb3d7447ae
 jquery-ui.min.js: jquery-ui.min-4258e47b40673a02bedfda178628bfba.js
 jquery.min.js: jquery.min-17322428695737103f15e8b9db8b5909.js
 application.js: application-b64fad6bc92bcbbc28e062cba8af58e6.js
-application.css: application-11e88ff38ebf4ff8fe3120f82000785c.css
+application.css: application-597e193d2b7e100025a40bd38d05d33a.css
 active_admin/application.js: active_admin/application-a05b0bf250576440ff9842e74764d8de.js
 active_admin.js: active_admin-e7db8419d25435904338fde0408a0b97.js
 active_admin.css: active_admin-33ae0ff48187a338dddf7da0d3d38ff9.css

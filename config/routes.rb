@@ -1,5 +1,7 @@
 Bookmate::Application.routes.draw do
 
+  resources :scrapers
+
   resources :sessions
 
   resources :users

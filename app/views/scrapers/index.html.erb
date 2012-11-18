@@ -1,0 +1,27 @@
+<h1>Listing scrapers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Site url</th>
+    <th>Rake task</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @scrapers.each do |scraper| %>
+  <tr>
+    <td><%= scraper.name %></td>
+    <td><%= scraper.site_url %></td>
+    <td><%= scraper.rake_task %></td>
+    <td><%= link_to 'Show', scraper %></td>
+    <td><%= link_to 'Edit', edit_scraper_path(scraper) %></td>
+    <td><%= link_to 'Destroy', scraper, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Scraper', new_scraper_path %>

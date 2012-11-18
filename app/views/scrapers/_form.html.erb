@@ -1,0 +1,29 @@
+<%= form_for(@scraper) do |f| %>
+  <% if @scraper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scraper.errors.count, "error") %> prohibited this scraper from being saved:</h2>
+
+      <ul>
+      <% @scraper.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :site_url %><br />
+    <%= f.text_field :site_url %>
+  </div>
+  <div class="field">
+    <%= f.label :rake_task %><br />
+    <%= f.text_field :rake_task %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

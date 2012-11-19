@@ -6,4 +6,4 @@
       = link_to '', sticker, confirm: 'Are you sure?', method: :delete
     .clearfix
   .sticker-color 
-    = text_field_tag "color","", {:size => 0, :class=>"izzyColor #{color}", :id=>"color#{sticker.id}"}
+    = text_field_tag "color","", {:size => 0, :class=>"izzyColor #{color}", :id=>"color#{sticker.quote.id}"}

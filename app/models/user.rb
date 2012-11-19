@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   validates_presence_of :email
   validates_presence_of :username
   validates_uniqueness_of :email
+  has_one :avatar, :class_name => "::Image", :as => :entity, :dependent => :destroy
 
   def to_param
     username

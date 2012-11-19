@@ -1,7 +1,7 @@
 .left-menu
 .right-content
   %table
-    - @user.quotes.each do |quote| 
+    - @user.quotes.all(:limit => 8).each do |quote| 
       %tr
         %td.quote
           = quote.text
@@ -10,3 +10,8 @@
           %td.tags
             - quote.tags.each do |tag|
               =link_to "##{tag.keyword}", quotes_path(:tag => tag.id)
+  %h1="Tagline for today"
+  .sticker-board
+    - @user.quotes.order("RANDOM()").limit(9).each do |quote|
+      .sticker
+        =render "/stickers/sticker", {:sticker => Sticker.new(:quote => quote), :color=> "pink"}

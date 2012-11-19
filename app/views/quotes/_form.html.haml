@@ -10,8 +10,6 @@
         %li
           = msg
   .field
-    = f.label "Что пишем"
-    %br
     = f.text_field :text, :size => 100
   %br
   =link_to "Может, это из книги?", "#",{:class => "notice", :id => "book-notice"}
@@ -28,4 +26,4 @@
           
 
   .actions
-    = f.submit "В молескин", {:class => "submit"}
+    = f.submit "Пишем", {:class => "submit"}

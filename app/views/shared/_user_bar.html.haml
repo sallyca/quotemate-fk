@@ -1,5 +1,5 @@
 .user-bar
-  = current_user.username
+  = link_to current_user.username, current_user
   =", "
   = Quote.short.first(:order => "RANDOM()").text.downcase
   

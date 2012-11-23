@@ -1,4 +1,5 @@
 class Quote < ActiveRecord::Base
+  
   belongs_to :book
   has_and_belongs_to_many :tags
   accepts_nested_attributes_for :tags
@@ -10,6 +11,7 @@ class Quote < ActiveRecord::Base
   attr_reader :tag_tokens
 
   scope :short, where("length(text) < 80")
+  scope :for_sticker, where("length(text) < 150")
 
   def book_title
     book.try(:title)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121113130613) do
+ActiveRecord::Schema.define(:version => 20121118183042) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -115,6 +115,14 @@ ActiveRecord::Schema.define(:version => 20121113130613) do
     t.integer "tag_id"
   end
 
+  create_table "scrapers", :force => true do |t|
+    t.string   "name"
+    t.string   "site_url"
+    t.string   "rake_task"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "stickers", :force => true do |t|
     t.integer  "quote_id"
     t.string   "color"
@@ -147,6 +155,7 @@ ActiveRecord::Schema.define(:version => 20121113130613) do
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "avatar_id"
   end
 
 end

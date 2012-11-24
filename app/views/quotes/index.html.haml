@@ -1,3 +1,5 @@
+.right-content
+  = link_to 'Добавить ещё', new_quote_path, {:id=>"add-quote", :class => "red-dressed"}
 .left-content
   -if @tag.present?
     ="##{@tag.keyword}"
@@ -12,6 +14,5 @@
           %td.tags
             - quote.tags.each do |tag|
               =link_to "##{tag.keyword}", quotes_path(:tag => tag.id)
-.right-content
-  = link_to 'Добавить ещё', new_quote_path, {:id=>"add-quote", :class => "submit"}
+
 .clearfix

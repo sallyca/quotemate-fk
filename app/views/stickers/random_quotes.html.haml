@@ -1,10 +1,11 @@
 %h1="Tagline for today"
 
-=link_to "Мне повезёт", random_quotes_stickers_path, {:class=> "submit"}
+=link_to "Мне повезёт", random_quotes_stickers_path, {:class=> "red-dressed"}
 #sticker-board
 
 - Quote.for_sticker.order("RANDOM()").limit(9).each do |quote|
   .sticker
     =render "sticker", {:sticker => Sticker.new(:quote => quote), :color=> "pink"}
 
+=link_to 'Приклеить ещё', "#new_sticker_form", {:id => "new-sticker", :class => "red-dressed"}
 =render "new_sticker"

@@ -1,6 +1,6 @@
 %h1="Доска липучек"
 
-=link_to "Мне повезёт", random_quotes_stickers_path, {:class=> "submit"}
+=link_to "Мне повезёт", random_quotes_stickers_path, {:class=> "red-dressed"}
 
 #sticker-board
   - @stickers.each do |sticker|
@@ -8,6 +8,6 @@
       =render "sticker", {:sticker => sticker, :color=>"green"}
 .clearfix
 
-=link_to 'Приклеить ещё', "#new_sticker_form", {:id => "new-sticker", :class => "submit"}
+=link_to 'Приклеить ещё', "#new_sticker_form", {:id => "new-sticker", :class => "red-dressed"}
 
 =render "new_sticker"

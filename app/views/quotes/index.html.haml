@@ -4,15 +4,15 @@
   -if @tag.present?
     ="##{@tag.keyword}"
 
-  %table
-    - @quotes.each do |quote|
+%table
+  - @quotes.each do |quote|
+    %tr
+      %td.quote
+        = quote.text
+    -unless params[:tag].present?
       %tr
-        %td.quote
-          = quote.text
-      -unless params[:tag].present?
-        %tr
-          %td.tags
-            - quote.tags.each do |tag|
-              =link_to "##{tag.keyword}", quotes_path(:tag => tag.id)
+        %td.tags
+          - quote.tags.each do |tag|
+            =link_to "##{tag.keyword}", quotes_path(:tag => tag.id)
 
 .clearfix

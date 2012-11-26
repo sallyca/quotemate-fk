@@ -3,10 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .sticker-back{
   height: 200px;
-  width: 250px;
+  width: 258px;
   border: 1px solid #999;
   background-color: #ffbbea;
-  margin: 10px;
+  margin: 10px 15px;
   position: relative; 
 }
 
@@ -29,7 +29,8 @@
 }
 
 #sticker-board {
-
+  width: 1000px;
+  margin: 20px 0 20px;
 }
 
 .izzyColor{

@@ -13,7 +13,7 @@
           %td.tags
             - quote.tags.each do |tag|
               =link_to "##{tag.keyword}", quotes_path(:tag => tag.id)
-  .sticker-board
+  .sticker-board-small
     - @user.quotes.order("RANDOM()").limit(2).each do |quote|
       .sticker
         =render "/stickers/sticker", {:sticker => Sticker.new(:quote => quote), :color=> "pink"}

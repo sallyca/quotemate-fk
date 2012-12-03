@@ -14,8 +14,7 @@ describe "Quotes" do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
       Quote.create!(:text => 'Human-Computer Interaction')
       get quotes_path
-      response.body.should include('Interaction')
-      
+      response.body.should include('Interaction')   
     end
 
     it "displays the quotes" do

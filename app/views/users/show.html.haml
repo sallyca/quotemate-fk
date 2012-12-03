@@ -4,7 +4,7 @@
     =image_tag("/assets/without-av.png")
 .right-content
   %table
-    - @user.quotes.all(:limit => 8).each do |quote| 
+    - @user.quotes.all(:limit => 8, :order=>"created_at desc").each do |quote| 
       %tr
         %td.quote
           = quote.text

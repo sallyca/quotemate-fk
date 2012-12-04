@@ -60,16 +60,32 @@ ul.ui-autocomplete {
     }
   }
 }
-td.quote{
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
 
-td.tags{
-  float:right;
-  margin-bottom: 10px;
-  color: grey;
-  font-family: palatino;
+.quote-list{
+  .text{
+    font-family: Georgia, serif;
+    margin: 0px 10px 5px;
+  }
+  .bottom{
+    margin: 5px 10px 45px;
+    .likes{
+      float:left;
+      a.like-quote{
+        background: url("/assets/like.gif") 0 0;
+        display:block;
+        width:10px;
+        height:10px;
+        opacity: 0.4;
+        &:hover { 
+          opacity: 1;
+        }
+      }
+    }
+    .tags{
+      float:left;
+      margin: 0 10px;
+      color: grey;
+      font-family: palatino;
+    }
+  }
 }
-
-      

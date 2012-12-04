@@ -3,16 +3,19 @@
   .avatar
     =image_tag("/assets/without-av.png")
 .right-content
-  %table
+  .quote-list
     - @user.quotes.all(:limit => 8, :order=>"created_at desc").each do |quote| 
-      %tr
-        %td.quote
-          = quote.text
+      .text
+        = quote.text
+      .clearfix
       -unless params[:tag].present?
-        %tr
-          %td.tags
+        .bottom
+          .likes
+            =link_to "","#", {:class=>"like-quote"}
+          .tags
             - quote.tags.each do |tag|
               =link_to "##{tag.keyword}", quotes_path(:tag => tag.id)
+        .clearfix
   .sticker-board-small
     - @user.quotes.order("RANDOM()").limit(2).each do |quote|
       .sticker

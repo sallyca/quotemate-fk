@@ -42,8 +42,8 @@ active_admin/nested_menu_arrow_dark.gif: active_admin/nested_menu_arrow_dark-373
 active_admin/orderable.png: active_admin/orderable-312cf8ad195f38825b0fb3d7447aef58.png
 jquery-ui.min.js: jquery-ui.min-4258e47b40673a02bedfda178628bfba.js
 jquery.min.js: jquery.min-17322428695737103f15e8b9db8b5909.js
-application.js: application-1771cc0ef6c298ab8be792e79f39816a.js
-application.css: application-00441ee5fdb70fc2571f2388c18ca3be.css
+application.js: application-78cac953abc2b484df721cec4fe95b85.js
+application.css: application-cbb98cb5815f961380fabfa68200f198.css
 active_admin/application.js: active_admin/application-a05b0bf250576440ff9842e74764d8de.js
 active_admin.js: active_admin-e7db8419d25435904338fde0408a0b97.js
 active_admin.css: active_admin-33ae0ff48187a338dddf7da0d3d38ff9.css

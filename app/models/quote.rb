@@ -6,6 +6,8 @@ class Quote < ActiveRecord::Base
   has_many :stickers
   belongs_to :user
 
+  likable!
+
   validates :text, :presence => true
   validates :text, :length => {:maximum => 250}
   attr_reader :tag_tokens

@@ -61,25 +61,33 @@ ul.ui-autocomplete {
   }
 }
 
-.quote-list{
+.quote-list {
   .text{
     font-family: Georgia, serif;
     margin: 0px 10px 5px;
+    font-size: 14px;
   }
   .bottom{
-    margin: 5px 10px 45px;
+    margin: 5px 10px 55px;
     .likes{
       float:left;
-      a.like-quote{
+      .like-quote{
         background: url("/assets/like.gif") 0 0;
         display:block;
-        width:10px;
-        height:10px;
+        margin: 5px;
+        width: 10px;
+        height: 10px;
         opacity: 0.4;
         &:hover { 
           opacity: 1;
         }
       }
+    }
+    .points{
+      float:left;
+      font-family: Georgia, serif;
+      font-size: 12px;
+      margin: 0 5px;
     }
     .tags{
       float: right;

@@ -1,5 +1,7 @@
 Bookmate::Application.routes.draw do
 
+  match "like" => "likes#like", :as => "like"
+
   resources :scrapers
 
   resources :sessions

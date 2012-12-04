@@ -25,6 +25,16 @@ class User < ActiveRecord::Base
     Time.now < (last_activity_at + 10.minutes) if last_activity_at
   end
 
+  def voted_for?(obj)
+    raise "Invalid entity given" unless obj.try(:likes).is_a?(Array)
+    obj.likes.exists?(:user_id => self.id)
+  end
+
+  def vote_for(obj)
+    raise "User already voted for this entity" if voted_for?(obj)
+    obj.vote self
+  end
+
   def recalculate_likerate
     self.points = LIKERATE_ENTITIES.map{|obj|
       points_module = Setting.find_or_set("points_for_#{obj.to_s.downcase.singularize}", '1.0').to_f

@@ -25,9 +25,10 @@ module Likable
   module InstanceMethods
 
     def vote(user)
-      self.rating.points +=  1
-      self.votes.create(:user => user) if rating.save
-      self.author.recalculate_rating
+      self.likerate = Likerate.new unless self.likerate
+      self.likerate.points += 1
+      self.likes.create(:user => user) if likerate.save
+      self.author.recalculate_likerate
     end
 
   end

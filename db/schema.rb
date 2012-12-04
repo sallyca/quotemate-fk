@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121118183042) do
+ActiveRecord::Schema.define(:version => 20121204124735) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -80,6 +80,22 @@ ActiveRecord::Schema.define(:version => 20121118183042) do
     t.integer  "image_height"
     t.string   "image_uid"
     t.string   "image_ext"
+    t.integer  "entity_id"
+    t.string   "entity_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "likerates", :force => true do |t|
+    t.integer  "points"
+    t.integer  "entity_id"
+    t.string   "entity_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "likes", :force => true do |t|
+    t.integer  "user_id"
     t.integer  "entity_id"
     t.string   "entity_type"
     t.datetime "created_at"

@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   authenticates_with_sorcery!
   has_many :quotes
   has_many :stickers
+  LIKERATE_ENTITIES = [:quotes]
 
   attr_accessible :email, :password, :username
 
@@ -22,6 +23,15 @@ class User < ActiveRecord::Base
 
   def online?
     Time.now < (last_activity_at + 10.minutes) if last_activity_at
+  end
+
+  def recalculate_likerate
+    self.points = LIKERATE_ENTITIES.map{|obj|
+      points_module = Setting.find_or_set("points_for_#{obj.to_s.downcase.singularize}", '1.0').to_f
+      self.send(obj).any? ? (self.send(obj).map(&:points).compact.sum.to_f * points_module) : 0.0
+    }.compact.sum.to_f + self.likerate.points
+    raise "Something goes wrong with #{self.email}(#{self.nickname}) recalculate likerate method" unless self.save
+    self.points
   end
 
 end

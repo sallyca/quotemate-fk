@@ -1,6 +1,8 @@
 class QuotesController < ApplicationController
   # GET /quotes
   # GET /quotes.json
+  before_filter :require_login, :only => [:new, :edit, :destroy]
+
   def index
     @tag = nil
     if params[:tag].present?

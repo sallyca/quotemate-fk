@@ -1,4 +1,11 @@
-#about p{
+#about {
+  width: 400px;
+  p {
   font-family: Georgia, serif;
   font-size: 15px;
+  }
+  .nano{
+    font-size: 10px;
+    font-style: italic;
+  }
 }

@@ -17,7 +17,7 @@
             = f.hidden_field :id, :value => quote.id
             = link_to "", "#", :class => "like-quote", :onclick=>"$('#quoteform_#{quote.id}').submit()"
         .points
-          = render "likes/like", :quote => quote 
+          = render "likes/like", :quote => quote
 
         .tags
           - quote.tags.each do |tag|

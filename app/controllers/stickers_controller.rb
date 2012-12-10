@@ -10,7 +10,7 @@ class StickersController < InheritedResources::Base
   def index
     @sticker = Sticker.new
     @stickers = Sticker.all
-    @stickers = @stickers.reject { |sticker| sticker.user!=current_user  }
+    # @stickers = @stickers.reject { |sticker| sticker.user!=current_user  }
     respond_with(@stickers)
   end
 

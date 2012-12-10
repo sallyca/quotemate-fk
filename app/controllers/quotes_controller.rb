@@ -12,7 +12,7 @@ class QuotesController < ApplicationController
       @quotes = Quote.limit(10).order('created_at DESC')
     end
 
-    @quotes = @quotes.reject { |quote| quote.user!=current_user  }
+    # @quotes = @quotes.reject { |quote| quote.user!=current_user  }
 
     respond_to do |format|
       format.html # index.html.erb

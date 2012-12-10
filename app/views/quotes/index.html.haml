@@ -12,6 +12,7 @@
     .clearfix
     - unless params[:tag].present?
       .bottom
+        =render "/shared/author", :quote => quote
         .tags
           - quote.tags.each do |tag|
             =link_to "##{tag.keyword}", quotes_path(:tag => tag.id)

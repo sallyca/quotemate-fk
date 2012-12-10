@@ -11,7 +11,7 @@ class QuotesController < ApplicationController
     elsif params[:book].present?
       @quotes = Book.find(params[:book]).quotes
     else
-      @quotes = Quote.limit(10).order('created_at DESC')
+      @quotes = Quote.limit(12).order('created_at DESC')
     end
 
     # @quotes = @quotes.reject { |quote| quote.user!=current_user  }

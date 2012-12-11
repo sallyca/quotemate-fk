@@ -3,7 +3,8 @@
 .clearfix
 .left-content
   -if @tag.present?
-    ="##{@tag.keyword}"
+    %h3.book-title="##{@tag.keyword}"
+.clearfix
 
 .quote-list
   - @quotes.each do |quote|

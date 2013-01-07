@@ -9,7 +9,7 @@
     <th></th>
   </tr>
 
-<% @passages.each do |passage| %>
+<% Passage.order('created_at desc').each do |passage| %>
   <tr>
     <td><%= passage.text %></td>
     <td><%= passage.book_id %></td>

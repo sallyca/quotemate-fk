@@ -49,8 +49,7 @@ namespace :scrape do
       book.xpath("//div[@class='b-quote ']").each do |quote_link|
         puts "+1 quote"
         lq = lambda {|xpath| quote_link.at_xpath(xpath).to_s.strip}
-        quote = Quote.new
-        quote.text = lq.call("p[@class='text']/a/text()")
+        quote = Quote.find_or_create_by_text(lq.call("p[@class='text']/a/text()"))
         quote.user = User.first
         quote.book = book_item
         quote.save

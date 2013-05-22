@@ -40,4 +40,5 @@ group :test, :development do
   gem 'minitest'
   gem 'capybara'
   gem 'launchy'
+  gem "rails-erd"
 end

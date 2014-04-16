@@ -28,7 +28,6 @@ gem 'sass-rails', "  ~> 3.1.0"
 
 gem 'jquery-rails'
 gem 'haml'
-gem 'pg'
 
 
 group :test, :development do

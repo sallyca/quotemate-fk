@@ -127,7 +127,6 @@ GEM
       httpauth (~> 0.1)
       multi_json (~> 1.0)
     orm_adapter (0.0.7)
-    pg (0.13.1)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -241,7 +240,6 @@ DEPENDENCIES
   launchy
   minitest
   nokogiri
-  pg
   rack-cache
   rack-rewrite
   rails (= 3.1.0)
